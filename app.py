@@ -16,7 +16,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ====================
 # Chroma DB Extraction
 # ====================
-CHROMA_DIR = "chroma_db"
+CHROMA_DIR = "chromadb"
 
 if not os.path.exists(CHROMA_DIR):
     with zipfile.ZipFile("chroma_db.zip", "r") as zip_ref:
@@ -93,7 +93,7 @@ def process_query(input_data, vector_store, qa_chain, llm):
 # Streamlit UI
 # ====================
 
-st.title("🚗 Car Issue RAG Summarizer")
+st.title("Car Issue RAG Summarizer")
 
 make = st.text_input("Enter Car Make")
 model = st.text_input("Enter Car Model")
@@ -117,11 +117,11 @@ if st.button("Generate Summary"):
         if metadata is None:
             st.warning("No relevant documents found.")
         else:
-            st.subheader("📄 Most Relevant Metadata")
+            st.subheader("Most Relevant Metadata")
             st.json(metadata)
 
-            st.subheader("🤖 QA Chain Response")
+            st.subheader("QA Chain Response")
             st.write(response)
 
-            st.subheader("📝 Summary")
+            st.subheader("Summary")
             st.write(summary)
