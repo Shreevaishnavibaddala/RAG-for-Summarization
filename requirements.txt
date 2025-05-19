@@ -1,0 +1,7 @@
+tensorflow
+pandas
+langchain
+langchain-community
+chromadb
+sentence-transformers
+scikit-learn
