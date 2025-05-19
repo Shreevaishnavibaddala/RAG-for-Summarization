@@ -19,7 +19,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 CHROMA_DIR = "chromadb"
 
 if not os.path.exists(CHROMA_DIR):
-    with zipfile.ZipFile("chroma_db.zip", "r") as zip_ref:
+    with zipfile.ZipFile("chromadb.zip", "r") as zip_ref:
         zip_ref.extractall(CHROMA_DIR)
 
 # Load Chroma DB
